@@ -2,6 +2,20 @@
   "expo": {
     "name": "target-project",
     "slug": "target-project",
-    "version": "1.0.0"
+    "scheme": "target-project",
+    "version": "1.0.0",
+    "android": {
+      "package": "com.gbrms.target",
+      "edgeToEdgeEnabled": true,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#3D44CD"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.gbrms.target",
+      "icon": "./assets/ios-icon.png"
+    },
+    "plugins": ["expo-router", "expo-status-bar"]
   }
 }

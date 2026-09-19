@@ -1,4 +1,4 @@
-package com.targetproject
+package com.gbrms.target
 
 import android.app.Application
 import android.content.res.Configuration

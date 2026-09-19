@@ -1,4 +1,4 @@
-package com.targetproject
+package com.gbrms.target
 
 import android.os.Build
 import android.os.Bundle
