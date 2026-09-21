@@ -1,19 +1,44 @@
-import { MaterialIcons } from '@expo/vector-icons'
-import { Tabs } from 'expo-router'
+import {
+  Inter_400Regular,
+  Inter_500Medium,
+  Inter_700Bold,
+  useFonts,
+} from '@expo-google-fonts/inter'
+import { Stack } from 'expo-router'
+
+import { colors } from '@/theme/colors'
+
+import { Loading } from '@/components/Loading'
 
 export default function Layout() {
-  console.log('Passou pelo LAYOUT primeiro!')
+  const [fontsLoaded] = useFonts({
+    Inter_400Regular,
+    Inter_500Medium,
+    Inter_700Bold,
+  })
+
+  if (!fontsLoaded) {
+    return <Loading />
+  }
+
   return (
-    <Tabs>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          tabBarIcon: ({ size, color }) => (
-            <MaterialIcons name="home" size={size} colo={color} />
-          ),
-        }}
-      />
-    </Tabs>
+    <Stack
+      screenOptions={{
+        headerShown: false,
+        contentStyle: { backgroundColor: colors.white },
+      }}
+    />
   )
 }
+
+// <Tabs>
+//   <Tabs.Screen
+//     name="index"
+//     options={{
+//       title: 'Home',
+//       tabBarIcon: ({ size, color }) => (
+//         <MaterialIcons name="home" size={size} colo={color} />
+//       ),
+//     }}
+//   />
+// </Tabs>

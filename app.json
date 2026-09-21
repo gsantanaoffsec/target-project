@@ -16,6 +16,10 @@
       "bundleIdentifier": "com.gbrms.target",
       "icon": "./assets/ios-icon.png"
     },
-    "plugins": ["expo-router", "expo-status-bar"]
+    "plugins": [
+      "expo-router",
+      "expo-status-bar",
+      "expo-font"
+    ]
   }
 }
